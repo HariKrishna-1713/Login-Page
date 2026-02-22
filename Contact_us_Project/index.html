@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+
+<style>
+body{
+    margin:0;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    align-items:center;   /* vertical alignment fix */
+    gap:30px;
+    height:100vh;         /* full screen height */
+}
+
+.card{
+    display:flex;
+    flex-direction:column;
+    gap:15px;             /* spacing without <br> */
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input, textarea{
+    padding:6px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    
+    <img src="/image.png" height="400" width="400">
+
+    <div class="card">
+        <h1>Contact Us</h1>
+
+        <form action="/random.py">
+
+            <div>
+                Name<br>
+                <input type="text" placeholder="First name" minlength="1" maxlength="20" required>
+                <input type="text" placeholder="Last name" minlength="1" maxlength="30" required>
+            </div>
+
+            <div>
+                Email<br>
+                <input type="email" placeholder="email.id" size="47" required>
+            </div>
+
+            <div>
+                Type your message here<br>
+                <textarea placeholder="message" minlength="1" maxlength="100" rows="6" cols="45"></textarea>
+            </div>
+
+            <input style="background:red; color:white;" type="submit" value="Submit">
+
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>
